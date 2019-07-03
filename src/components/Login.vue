@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>{{msg}}</h1>
+    <!-- <h1>{{msg}}</h1> -->
     <div class="login">
       <el-form
         :model="ruleForm"
@@ -44,8 +44,9 @@ export default {
             trigger: "blur"
           },
           {
-            min: 5,message:'至少5位数',
-            trigger: 'blur'
+            min: 5,
+            message: "至少5位数",
+            trigger: "blur"
           }
         ]
       }
@@ -56,14 +57,14 @@ export default {
       this.$refs[formName].validate(valid => {
         if (valid) {
           // alert("submit!");
-          this.$router.push('/index');
+          this.$router.push("/index");
         } else {
           console.log("error submit!!");
           return false;
         }
       });
     },
-    resetForm(formName){
+    resetForm(formName) {
       this.$refs[formName].resetFields();
     }
   }
@@ -72,22 +73,33 @@ export default {
 
 <style scoped>
 .container {
-  box-sizing: border-box;
+  position: relative;
 }
 h1 {
   font-weight: 400;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: cursive;
   font-style: italic;
 }
 .login {
   width: 300px;
   height: 200px;
   box-shadow: 2px 2px 14px #cccccc;
-  margin: 80px auto;
+  position: absolute;
   padding: 20px 30px 10px 0px;
   box-sizing: border-box;
+  animation: changeColor 5s ease 3s infinite alternate;
+  margin-left: 5px;
+  margin-top: 50px;
 }
 .el-form-item {
   margin-left: 0px;
+}
+@keyframes changeColor {
+  from {
+    background-color: #80afec;
+  }
+  to {
+    background-color: #aed3f6;
+  }
 }
 </style>

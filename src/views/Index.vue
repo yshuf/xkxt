@@ -1,46 +1,20 @@
 <template>
   <div class="container">
-    <el-container>
-      <el-header>Header</el-header>
-      <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-main>Main</el-main>
-      </el-container>
-    </el-container>
+    <HeaderNav></HeaderNav>
+    <Main></Main>
   </div>
 </template>
 
 <script>
-export default {};
+import HeaderNav from "@/views/Layout/HeaderNav";
+import Main from '@/views/Layout/Main'
+export default {
+  components: {
+    HeaderNav,
+    Main
+  }
+};
 </script>
 
 <style scoped>
-.el-header {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
-}
-
-.el-aside {
-  background-color: #ffffff;
-  text-align: center;
-  line-height: 200px;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 70px;
-  bottom: 0;
-  overflow-y: scroll;
-}
-
-.el-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-}
-body > .el-container {
-  margin-bottom: 40px;
-}
 </style>
