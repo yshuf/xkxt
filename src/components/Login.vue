@@ -2,25 +2,28 @@
   <div class="container">
     <!-- <h1>{{msg}}</h1> -->
     <div class="login">
-      <el-form
-        :model="ruleForm"
-        status-icon
-        :rules="rules"
-        ref="ruleForm"
-        label-width="100px"
-        class="demo-ruleForm"
-      >
-        <el-form-item label="学号" prop="id">
-          <el-input v-model.number="ruleForm.id"></el-input>
-        </el-form-item>
-        <el-form-item label="密码" prop="pass">
-          <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
-          <el-button @click="resetForm('ruleForm')">重置</el-button>
-        </el-form-item>
-      </el-form>
+      <fieldset>
+        <legend>登录入口</legend>
+        <el-form
+          :model="ruleForm"
+          status-icon
+          :rules="rules"
+          ref="ruleForm"
+          label-width="100px"
+          class="demo-ruleForm"
+        >
+          <el-form-item label="学号" prop="id">
+            <el-input v-model.number="ruleForm.id"></el-input>
+          </el-form-item>
+          <el-form-item label="密码" prop="pass">
+            <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
+            <el-button @click="resetForm('ruleForm')">重置</el-button>
+          </el-form-item>
+        </el-form>
+      </fieldset>
     </div>
   </div>
 </template>
@@ -30,7 +33,6 @@ export default {
   name: "login",
   data() {
     return {
-      msg: "学生选课小系统",
       ruleForm: {
         id: "",
         pass: ""
@@ -56,9 +58,13 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          // alert("submit!");
-          this.$router.push("/index");
+          this.$message({
+            type: "success",
+            message: "登录成功，去选课"
+          });
+          this.$router.push("/selectMain");
         } else {
+          s;
           console.log("error submit!!");
           return false;
         }
@@ -80,26 +86,35 @@ h1 {
   font-family: cursive;
   font-style: italic;
 }
+/* 登录框 */
 .login {
-  width: 300px;
+  width: 280px;
   height: 200px;
-  box-shadow: 2px 2px 14px #cccccc;
+  box-shadow: 2px 2px 14px #81d8ee;
   position: absolute;
-  padding: 20px 30px 10px 0px;
+  padding: 20px 0px 10px 0px;
   box-sizing: border-box;
-  animation: changeColor 5s ease 3s infinite alternate;
+  animation: changeColor 2s ease 3s infinite alternate;
   margin-left: 5px;
   margin-top: 50px;
 }
+fieldset {
+  width: 280px;
+  height: 213px;
+  box-sizing: border-box;
+  margin: -32px 0 0 0px;
+  border: 1px solid #6baefa;
+  font-family:cursive;
+}
 .el-form-item {
-  margin-left: 0px;
+  margin-left: -40px;
 }
 @keyframes changeColor {
   from {
-    background-color: #80afec;
+    background-color: #6baefa;
   }
   to {
-    background-color: #aed3f6;
+    background-color: #96a8f8;
   }
 }
 </style>

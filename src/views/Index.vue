@@ -1,17 +1,16 @@
 <template>
   <div class="container">
+    <!-- 头部导航栏 -->
     <HeaderNav></HeaderNav>
-    <Main></Main>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import HeaderNav from "@/views/Layout/HeaderNav";
-import Main from '@/views/Layout/Main'
 export default {
   components: {
-    HeaderNav,
-    Main
+    HeaderNav
   }
 };
 </script>

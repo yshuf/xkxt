@@ -6,8 +6,9 @@
     <span class="welcome">欢迎进入系统，请先</span>
     <!-- 注册登录 -->
     <el-breadcrumb separator="/">
-      <el-breadcrumb-item @click="toRegister">注册</el-breadcrumb-item>
-      <el-breadcrumb-item>登录</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{path: '/register'}">注册</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{path: '/index'}">登录</el-breadcrumb-item>
+
     </el-breadcrumb>
     <!-- 头像 -->
     <img src="@/assets/S.jpg" alt class="avatar" />
@@ -15,8 +16,7 @@
     <el-dropdown>
       <i class="el-icon-arrow-down" style="margin-right: 15px"></i>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item><i class="el-icon-switch-button"></i>退出登录</el-dropdown-item>
-        <el-dropdown-item>新增</el-dropdown-item> 
+        <el-dropdown-item><i class="el-icon-switch-button"></i><el-button  @click="logout">退出登录</el-button></el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </div>
@@ -27,6 +27,10 @@ export default {
   methods: {
     toRegister(){
       this.$router.push('/register');
+    },
+    logout(){
+      this.$router.push('/index');
+      console.log('hha');
     }
   }
 };
@@ -38,7 +42,7 @@ export default {
   color: #333;
   text-align: center;
   height: 60px;
-  animation: changeColor 5s linear 3s infinite alternate;
+  animation: changeColor 2s linear 3s infinite alternate;
   position: relative;
   min-width: 600px;
 }
@@ -94,11 +98,12 @@ img {
 }
 .el-breadcrumb-item {
   cursor: pointer;
+  color: red;
 }
 /* 下拉菜单 */
 .el-dropdown {
   float: right;
-  margin-right: -220px;
+  margin-right: -230px;
   line-height: 60px;
   font-size: 18px;
 }
