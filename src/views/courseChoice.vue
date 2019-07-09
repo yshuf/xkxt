@@ -3,6 +3,7 @@
     <div class="info">
       <span>学号：{{studentID}}</span>
       <span>姓名：{{username}}</span>
+      <span>班级：{{className}}</span>
     </div>
     <!-- 所有待选课程 -->
     <div class="main">
@@ -103,7 +104,8 @@ export default {
       ],
       multipleSelection: [],
       studentID: "08070116215",
-      username: "小鱼河中游"
+      username: "小鱼河中游",
+      className: "电信162班"
     };
   },
 
@@ -145,23 +147,22 @@ export default {
 </script>
 
 <style scoped>
-/* .courseChoice {
-  width: 80%;
+.courseChoice {
+  width: 100%;
   box-shadow: 2px 2px 14px #ccc;
-  background: url("../assets/images/courseS.jpg") no-repeat 100% 100%;
-  position: fixed;
-  background-size: 100% 100%;
-
-} */
+  padding: 15px;
+  margin: 0px auto;
+  box-sizing: border-box;
+}
 .main {
   width: 80%;
   background-color: #c7cebd;
   margin: 0px auto;
 }
 .info {
-  margin-top: 15px;
   font-weight: 700;
   font-size: 16px;
+  margin-bottom: 15px;
 }
 span {
   margin-left: 25px;

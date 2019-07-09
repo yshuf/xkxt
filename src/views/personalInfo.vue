@@ -4,9 +4,11 @@
       <fieldset>
         <legend>学生个人信息</legend>
 
+        <!-- 姓名 -->
         <label for="userName">姓名：</label>
         <input type="text" placeholder="请输入姓名" name="userName" v-model="form.username" />
 
+        <!-- 手机号码 -->
         <label for="userPhone">手机号码：</label>
         <input type="tel" id="userPhone" name="userPhone" v-model="form.userPhone" />
 
@@ -35,13 +37,16 @@
         <label for>基础水平：</label>
         <meter max="750" min="0" low="300" high="750" ref="level"></meter>
 
+        <!-- 入学日期 -->
         <label for="inTime">入学日期：</label>
         <input type="date" name="inTime" id="inTime" v-model="form.inTime" />
 
+        <!-- 毕业日期 -->
         <label for="outTime">毕业日期：</label>
         <input type="date" name="outTime" id="outTime" v-model="form.outTime" />
-
-        <input type="submit" />
+        
+        <!-- 提交按钮 -->
+        <input type="submit"/>
       </fieldset>
     </form>
   </div>

@@ -14,9 +14,9 @@
     <img src="@/assets/S.jpg" alt class="avatar" />
     <!-- 退出登录 -->
     <el-dropdown>
-      <i class="el-icon-arrow-down" style="margin-right: 15px"></i>
+      <i class="el-icon-arrow-down" style="margin-right: 15px;margin-top: 23px;"></i>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item><i class="el-icon-switch-button"></i><el-button  @click="logout">退出登录</el-button></el-dropdown-item>
+        <el-button  @click="logout" size="mini" round><el-dropdown-item><i class="el-icon-switch-button"></i>退出登录</el-dropdown-item></el-button>
       </el-dropdown-menu>
     </el-dropdown>
   </div>
@@ -29,6 +29,10 @@ export default {
       this.$router.push('/register');
     },
     logout(){
+      this.$message({
+        type:"success",
+        message:　"成功退出"
+      })
       this.$router.push('/index');
       console.log('hha');
     }
@@ -104,7 +108,7 @@ img {
 .el-dropdown {
   float: right;
   margin-right: -230px;
-  line-height: 60px;
+  /* line-height: 60px; */
   font-size: 18px;
 }
 </style>
