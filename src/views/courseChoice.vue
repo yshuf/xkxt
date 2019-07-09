@@ -42,7 +42,7 @@ export default {
           date: "2016-05-03",
           name: "王小虎",
           category: "自然科学类",
-          credit: "上海市普陀区金沙江路 1518 弄",
+          credit: "3",
           time: "每周三7，8节课，周五3,4节课",
           address: "204",
           teacher: "李燕"
@@ -51,7 +51,7 @@ export default {
           date: "2016-05-03",
           name: "王小虎",
           category: "自然科学类",
-          credit: "上海市普陀区金沙江路 1518 弄",
+          credit: "3.5",
           time: "每周三7，8节课，周五3,4节课",
           address: "204",
           teacher: "李燕"
@@ -60,7 +60,7 @@ export default {
           date: "2016-05-03",
           name: "王小虎",
           category: "自然科学类",
-          credit: "上海市普陀区金沙江路 1518 弄",
+          credit: "1",
           time: "每周三7，8节课，周五3,4节课",
           address: "204",
           teacher: "李燕"
@@ -69,7 +69,7 @@ export default {
           date: "2016-05-03",
           name: "王小虎",
           category: "自然科学类",
-          credit: "上海市普陀区金沙江路 1518 弄",
+          credit: "2.5",
           time: "每周三7，8节课，周五3,4节课",
           address: "204",
           teacher: "李燕"
@@ -78,7 +78,7 @@ export default {
           date: "2016-05-03",
           name: "王小虎",
           category: "自然科学类",
-          credit: "上海市普陀区金沙江路 1518 弄",
+          credit: "3.5",
           time: "每周三7，8节课，周五3,4节课",
           address: "204",
           teacher: "李燕"
@@ -87,7 +87,7 @@ export default {
           date: "2016-05-03",
           name: "王小虎",
           category: "自然科学类",
-          credit: "上海市普陀区金沙江路 1518 弄",
+          credit: "2.5",
           time: "每周三7，8节课，周五3,4节课",
           address: "204",
           teacher: "李燕"
@@ -96,7 +96,7 @@ export default {
           date: "2016-05-03",
           name: "王小虎",
           category: "自然科学类",
-          credit: "上海市普陀区金沙江路 1518 弄",
+          credit: "1",
           time: "每周三7，8节课，周五3,4节课",
           address: "204",
           teacher: "李燕"
